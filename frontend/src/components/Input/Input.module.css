@@ -1,0 +1,38 @@
+.inputGroup {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.input:focus {
+    border-color: #00b5b1;
+    outline: none;
+}
+
+
+.passwordStrength {
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+.Weak {
+    color: red;
+}
+
+.Medium {
+    color: orange;
+}
+
+.Strong {
+    color: green;
+}
