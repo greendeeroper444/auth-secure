@@ -2,18 +2,46 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #1a1a1a;
+    min-height: 100vh;
+    background-color: #fff;
+    padding: 20px;
 }
 
 .formContainer {
-    padding: 40px;
-    background: linear-gradient(135deg, #007c92 50%, #00b5b1 50%);
+    display: flex;
+    width: 900px;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    width: 400px;
-    text-align: center;
+    overflow: hidden;
+    max-height: 100%;
+    height: 490px;
+}
+
+.left {
+    flex: 1;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.right {
+    flex: 1;
+    padding: 40px;
+    background: linear-gradient(135deg, #495D63 50%, #629677 50%);
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .title {
@@ -27,46 +55,9 @@
     font-size: 14px;
 }
 
-
-.inputGroup {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-.input {
+.form {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    color: #333;
-    box-sizing: border-box;
-}
-
-.input:focus {
-    border-color: #00b5b1;
-    outline: none;
-}
-
-.errorMessage {
-    color: red;
-    font-size: 15px;
-}
-
-.button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007c92;
-    color: #fff;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #00b5b1;
+    max-width: 300px;
 }
 
 .footer {
@@ -75,9 +66,9 @@
 }
 
 .link {
-    color: #00b5b1;
+    color: #495D63;
     text-decoration: none;
-    color: #fff;
+    font-weight: bold;
 }
 
 .link:hover {
@@ -85,20 +76,116 @@
 }
 
 
-
-.passwordStrength  {
-  margin-top: 5px;
-  font-size: 0.9em;
+.errorMessage {
+    color: red;
+    font-size: 15px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 10px;
 }
 
+/* bar cotnainer */
+.passwordStrengthBarContainer {
+    height: 10px;
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+    position: relative;
+}
+  
+.passwordStrengthBar {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out;
+}
+  
+.passwordStrengthBar.Weak {
+    width: 30%;
+    background-color: #741414;
+}
+  
+.passwordStrengthBar.Medium {
+    width: 60%;
+    background-color: #746214;
+}
+  
+.passwordStrengthBar.Strong {
+    width: 100%;
+    background-color: #147452;
+}
+  
+.passwordStrengthText {
+    margin-top: 5px;
+    font-size: 0.9em;
+    text-align: right;
+}
+  
+/* text */
+.passwordStrength {
+    margin-top: 5px;
+    font-size: 0.9em;
+    text-align: end;
+}
+  
 .passwordStrength.Weak {
-  color: red;
+    color: #741414;
+    text-shadow: 0 0 2px white, 0 0 5px white;
+    font-weight: bold;
 }
-
+  
 .passwordStrength.Medium {
-  color: orange;
+    color: #746214;
+    text-shadow: 0 0 2px white, 0 0 5px white;
+    font-weight: bold;
+}
+  
+.passwordStrength.Strong {
+    color: #147452;
+    text-shadow: 0 0 2px white, 0 0 5px white;
+    font-weight: bold;
 }
 
-.passwordStrength.Strong {
-  color: green;
+
+
+
+/* responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        min-height: 100%;
+        padding: 20px;
+        align-items: flex-start;
+        overflow-y: auto;
+    }
+
+    .formContainer {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .left, .right {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .left img {
+        max-width: 80%;
+        margin: 20px 0;
+    }
+
+    .right {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .right {
+        padding: 10px;
+    }
+
+    .left img {
+        max-width: 100%;
+    }
 }

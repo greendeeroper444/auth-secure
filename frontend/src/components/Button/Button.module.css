@@ -1,7 +1,7 @@
 .button {
     width: 100%;
     padding: 10px;
-    background-color: #007c92;
+    background-color: #495D63;
     color: #fff;
     border-radius: 5px;
     border: none;
@@ -10,5 +10,8 @@
 }
 
 .button:hover {
-    background-color: #00b5b1;
+    background-color: #629677;
+    box-shadow: 0 0 20px rgba(86, 100, 99, 0.5);
+    border: 1px solid #495D63;
+    padding: 9px;
 }

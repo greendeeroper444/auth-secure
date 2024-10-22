@@ -1,11 +1,16 @@
 .inputGroup {
     margin-bottom: 15px;
     text-align: left;
+    position: relative;
+}
+
+.inputWithIcon {
+    position: relative;
 }
 
 .input {
     width: 100%;
-    padding: 10px;
+    padding: 10px 10px 10px 45px;
     margin-top: 5px;
     border-radius: 5px;
     border: 1px solid #ddd;
@@ -15,24 +20,28 @@
 }
 
 .input:focus {
-    border-color: #00b5b1;
+    border-color: #629677;
     outline: none;
 }
-
 
 .passwordStrength {
     margin-top: 5px;
     font-size: 0.9em;
 }
 
-.Weak {
-    color: red;
-}
-
-.Medium {
-    color: orange;
-}
-
-.Strong {
-    color: green;
+.icon {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    pointer-events: none;
+    font-size: 1.1em;
+    border-right: 1px solid #ddd;
+    padding-right: 10px;
+    height: calc(100% - 12px);
+    margin-top: 6px;
 }

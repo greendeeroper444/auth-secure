@@ -1,13 +1,13 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const cors = require('cors');
-const UserRoute = require('./routers/UserRoutes');
+const UserRoute = require('./routers/userRoutes');
+const middleware = require('./middlewares/middleware');
 
 const app = express();
 const PORT = 5000;
 
-app.use(bodyParser.json());
-app.use(cors());
+app.use(middleware);
 
 app.use('/api/users', UserRoute);
 

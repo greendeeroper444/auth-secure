@@ -1,0 +1,112 @@
+.container {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+.container input {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.container input:focus {
+    border-color: #629677;
+    outline: none;
+}
+
+.container select {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.container button {
+    padding: 10px;
+    background-color: #147452;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: #0c6848;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    display: block;
+    overflow-x: auto;
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    min-width: 100px;
+}
+
+.table th {
+    background-color: #f8f9fa;
+}
+
+.scrollableCell {
+    max-width: 300px;
+    overflow-y: auto;
+    white-space: nowrap;
+}
+
+
+
+/* responsive styles */
+/* @media (max-width: 768px) {
+    .table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    .table th,
+    .table td {
+        display: block;
+        text-align: left;
+    }
+
+    .table th {
+        position: absolute;
+        left: -9999px;
+    }
+
+    .table tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 50%;
+        text-align: left;
+        font-weight: bold;
+    }
+} */
